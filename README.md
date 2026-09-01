@@ -1,55 +1,41 @@
-# 🚀 Projekt-Titel
+# System-Diagnostics
 
 Eine kurze, prägnante Beschreibung in 1–2 Sätzen, was das Projekt tut und welches Problem es löst.
 
-## 🛠️ Features
-* **Feature 1** - Kurze Erklärung der Funktion.
-* **Feature 2** - Warum dieses Feature nützlich ist.
-* **Modernes UI** - Schnell, responsiv und benutzerfreundlich.
+## What is system-diagnostics?
+* **Quick System Diagnostic Commands for systemd based Linux Systems**
+* **works with bash**
+* **Easy Install and Uninstall**
 
 ## 📦 Installation
 
 Folge diesen Schritten, um das Projekt lokal einzurichten:
 
-1. **Repository klonen**
+1. **Get & Execute Install Script**
    ```bash
-   git clone https://github.com
+   curl -fsSL https://raw.githubusercontent.com/sxrr-01/sysdiagnose/main/system-diagnostics_setup.sh | sh
    ```
-2. **In das Verzeichnis wechseln**
+2. **Follow the singular install Prompt & Read the Instructions**
+
+3. **Reload your Shell or run 'source ~/.bashrc' for all Changes to take Effect**
+
+## 🚀 How to Use
+
+* **Run 'system-diagnostics' to Run a quick Boot Time & Storage Overview. Output will be written to: ~/system-diagnostics/an-out.txt**
    ```bash
-   cd DEIN-REPOSITORY
+   system-diagnostics
    ```
-3. **Abhängigkeiten installieren**
+* **Run 'whatpower' to get current Input Voltage, Current and Wattage (Experimental)**
    ```bash
-   npm install  # Oder: pip install -r requirements.txt
+   whatpower
    ```
+* **Run 'bashedit' for quick ~/.bashrc access**
+   ```bash
+   bashedit
+   ```
+   
 
-## 🚀 Nutzung
+## That's It!
 
-So startest du die Anwendung:
+Feel Free to do whatever you want with this Code
 
-```bash
-npm start  # Oder: python main.py
-```
-
-*Gib hier kurze Beispiele oder Code-Snippets für die Benutzung an.*
-
-## 🤝 Beitragen (Contributing)
-
-Beiträge sind immer willkommen! 
-
-1. Forke das Projekt.
-2. Erstelle einen Feature-Branch (`git checkout -b feature/AmazingFeature`).
-3. Committe deine Änderungen (`git commit -m 'Add some AmazingFeature'`).
-4. Pushe den Branch (`git push origin feature/AmazingFeature`).
-5. Öffne einen Pull Request.
-
-## 📄 Lizenz
-
-Dieses Projekt ist unter der **MIT-Lizenz** lizenziert – siehe die [LICENSE](LICENSE)-Datei für Details.
-
-## 📬 Kontakt
-
-Dein Name – [@dein_twitter](https://twitter.com) – email@example.com
-
-Projekt-Link: [https://github.com](https://github.com)
