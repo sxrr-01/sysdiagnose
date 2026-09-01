@@ -9,7 +9,7 @@
 
 1. **Get & Execute Install Script (Paste into your Bash Shell)**
    ```bash
-   curl -fsSL https://raw.githubusercontent.com/sxrr-01/sysdiagnose/main/system-diagnostics_setup.sh | sh
+   curl -fsSL https://raw.githubusercontent.com/sxrr-01/sysdiagnose/main/system-diagnostics_setup.sh | bash
    ```
 2. **Follow the singular install Prompt & Read the Instructions**
 
