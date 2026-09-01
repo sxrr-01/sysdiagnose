@@ -1,5 +1,13 @@
 #!/bin/bash
 
+read -p "Do you want to install system-diagnostics? (y/N) " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "Installing..."
+else
+    echo "Aborted Installation."
+fi
+
 mkdir ~/system-diagnostics
 touch ~/system-diagnostics/system-diagnostics.sh
 touch ~/system-diagnostics/power.sh
