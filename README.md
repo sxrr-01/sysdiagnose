@@ -33,7 +33,7 @@
    ```
 * **Run 'uninstall-system-diagnostics' to Uninstall this Package**
    ```bash
-   bashedit
+   uninstall-system-diagnostics
    ```
 
 ## That's It!
