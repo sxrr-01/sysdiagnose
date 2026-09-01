@@ -1,7 +1,5 @@
 # System-Diagnostics
 
-Eine kurze, prägnante Beschreibung in 1–2 Sätzen, was das Projekt tut und welches Problem es löst.
-
 ## What is system-diagnostics?
 * **Quick System Diagnostic Commands for systemd based Linux Systems**
 * **works with bash**
