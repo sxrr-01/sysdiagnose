@@ -10,20 +10,20 @@ else
     exit 1
 fi
 
-TARGET_DIR="~/system-diagnostics"
+TARGET_DIR="$HOME/system-diagnostics"
 
 if [ -d "$TARGET_DIR" ]; then
     echo "This Package Already Exists" >&2
 
-    read -p "Do you want to proceed anyway? [y/N]: " REPLY
+    read -p "Do you want to proceed anyway? [y/N]: " REPLY </dev/tty
 
     REPLY=${REPLY:-N}
 
     if [[ "$REPLY" =~ ^[Yy]$ ]]; then
         echo "Installing..."
-        rm -rf ~/system-diagnostics
-        sed -i '/system-diagnostics/d' ~/.bashrc
-        sed -i '/bashedit/d' ~/.bashrc
+        rm -rf "$TARGET_DIR"
+        sed -i '/system-diagnostics/d' "$HOME/.bashrc"
+        sed -i '/bashedit/d' "$HOME/.bashrc"
     else
         echo "Aborting Installation." >&2
         exit 1
