@@ -54,7 +54,6 @@ rm -rf ~/system-diagnostics
 sed -i '/system-diagnostics/d' ~/.bashrc
 sed -i '/bashedit/d' ~/.bashrc
 source ~/.bashrc
-
 EOF
 
 chmod +x ~/system-diagnostics/system-diagnostics.sh
@@ -73,7 +72,8 @@ Added Commands & Functionality:
     Run 'system-diagnostics' to Run a quick Boot Time & Storage Overview. Output will be written to: ~/system-diagnostics/an-out.txt
     Run 'whatpower' to get current Input Voltage, Current and Wattage
     Run 'bashedit' for quick ~/.bashrc access \n
-To Uninstall this Package, Run 'uninstall-system-diagnostics'
+To Uninstall this Package, Run 'uninstall-system-diagnostics' \n
+Please Reload your Shell for all Changes to take Effect
 "
 
 
