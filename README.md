@@ -7,9 +7,7 @@
 
 ## 📦 Installation
 
-Folge diesen Schritten, um das Projekt lokal einzurichten:
-
-1. **Get & Execute Install Script**
+1. **Get & Execute Install Script (Paste into your Bash Shell)**
    ```bash
    curl -fsSL https://raw.githubusercontent.com/sxrr-01/sysdiagnose/main/system-diagnostics_setup.sh | sh
    ```
