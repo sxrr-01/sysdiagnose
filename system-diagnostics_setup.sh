@@ -1,9 +1,14 @@
 #!/bin/bash
 
-read -p "Do you want to Install system-diagnostics? [Y/n] " -n 1 -r
+read -p "Do you want to Install system-diagnostics? [Y/n] " -n 1 -r </dev/tty
+echo
 
 if [[ -z "$REPLY" || "$REPLY" =~ ^[Yy]$ ]]; then
     echo "Installing..."
+else
+    echo "Aborting Installation."
+    exit 1
+fi
 
 mkdir ~/system-diagnostics
 touch ~/system-diagnostics/system-diagnostics.sh
@@ -60,9 +65,4 @@ Added Commands & Functionality:
 To Uninstall this Package, Run 'uninstall-system-diagnostics'
 "
 
-
-else
-    echo "Aborted Installation"
-    exit 1
-fi
 
