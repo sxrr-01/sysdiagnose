@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p "Do you want to proceed with the Installation of system-diagnostics? [Y/n] " -n 1 -r </dev/tty
+read -p "Do you want to Install system-diagnostics? [Y/n] " -n 1 -r </dev/tty
 echo
 
 if [[ -z "$REPLY" || "$REPLY" =~ ^[Yy]$ ]]; then
