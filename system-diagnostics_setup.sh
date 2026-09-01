@@ -1,7 +1,6 @@
 #!/bin/bash
 
 read -p "Do you want to Install system-diagnostics? [Y/n] " -n 1 -r
-echo
 
 if [[ -z "$REPLY" || "$REPLY" =~ ^[Yy]$ ]]; then
     echo "Installing..."
