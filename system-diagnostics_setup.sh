@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 read -p "Do you want to Install system-diagnostics? [Y/n] " -n 1 -r </dev/tty
 echo
@@ -20,7 +20,7 @@ if [ -d "$TARGET_DIR" ]; then
     REPLY=${REPLY:-N}
 
     if [[ "$REPLY" =~ ^[Yy]$ ]]; then
-        echo "Installing..."
+        echo "Re-Installing..."
         rm -rf "$TARGET_DIR"
         sed -i '/system-diagnostics/d' "$HOME/.bashrc"
         sed -i '/bashedit/d' "$HOME/.bashrc"
