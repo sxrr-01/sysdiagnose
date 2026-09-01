@@ -40,10 +40,21 @@ echo "Voltage: ${voltage_now2}V Current: ${current_now2}A Wattage: ${wattage2}W"
 EOF
 
 cat << 'EOF' >> ~/system-diagnostics/unins_sysdiag.sh
+read -p "Do you want to Uninstall system-diagnostics? [Y/n] " -n 1 -r </dev/tty
+echo
+
+if [[ -z "$REPLY" || "$REPLY" =~ ^[Yy]$ ]]; then
+    echo "Uninstalling..."
+else
+    echo "Aborting"
+    exit 1
+fi
+
 rm -rf ~/system-diagnostics
 sed -i '/system-diagnostics/d' ~/.bashrc
 sed -i '/bashedit/d' ~/.bashrc
 source ~/.bashrc
+
 EOF
 
 chmod +x ~/system-diagnostics/system-diagnostics.sh
