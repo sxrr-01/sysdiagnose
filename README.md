@@ -1,6 +1,6 @@
 # System-Diagnostics
 
-## What is system-diagnostics?
+# What is system-diagnostics?
 * **Quick System Diagnostic Commands for systemd based Linux Systems**
 * **works with bash**
 * **Easy Install and Uninstall**
