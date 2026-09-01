@@ -1,13 +1,10 @@
 #!/bin/bash
 
-while true; do
-    read -p "Do you want to Install system-diagnostics? [y/n]: " yn
-    case $yn in
-        [Yy]* ) echo "Installing..."; break;;
-        [Nn]* ) echo "Aborted Installation"; exit;;
-        * ) echo "Please answer yes or no.";;
-    esac
-done
+read -p "Do you want to Install system-diagnostics? [Y/n] " -n 1 -r
+echo
+
+if [[ -z "$REPLY" || "$REPLY" =~ ^[Yy]$ ]]; then
+    echo "Installing..."
 
 mkdir ~/system-diagnostics
 touch ~/system-diagnostics/system-diagnostics.sh
@@ -63,3 +60,10 @@ Added Commands & Functionality:
     Run 'bashedit' for quick ~/.bashrc access \n
 To Uninstall this Package, Run 'uninstall-system-diagnostics'
 "
+
+
+else
+    echo "Aborted Installation"
+    exit 1
+fi
+
