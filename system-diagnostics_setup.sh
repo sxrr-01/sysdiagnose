@@ -73,7 +73,7 @@ Added Commands & Functionality:
     Run 'whatpower' to get current Input Voltage, Current and Wattage
     Run 'bashedit' for quick ~/.bashrc access \n
 To Uninstall this Package, Run 'uninstall-system-diagnostics' \n
-Please Reload your Shell for all Changes to take Effect
+Please Reload your Shell or run 'source ~/.bashrc' for all Changes to take Effect
 "
 
 
