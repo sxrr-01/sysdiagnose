@@ -5,7 +5,7 @@
 * **works with bash**
 * **Easy Install and Uninstall**
 
-## 📦 Installation
+## Installation
 
 1. **Get & Execute Install Script (Paste into your Bash Shell)**
    ```bash
@@ -15,7 +15,9 @@
 
 3. **Reload your Shell or run 'source ~/.bashrc' for all Changes to take Effect**
 
-## 🚀 How to Use
+## How to Use
+
+**All of these Instructions can be found in the Post-Install Prompt**
 
 * **Run 'system-diagnostics' to Run a quick Boot Time & Storage Overview. Output will be written to: ~/system-diagnostics/an-out.txt**
    ```bash
@@ -29,7 +31,10 @@
    ```bash
    bashedit
    ```
-   
+* **Run 'uninstall-system-diagnostics' to Uninstall this Package**
+   ```bash
+   bashedit
+   ```
 
 ## That's It!
 
