@@ -31,6 +31,10 @@
    ```bash
    bashedit
    ```
+* **Run 'plasmarestart' to restart Plasmashell in Case of Hangups / Crashes (Will close Running Programs!)**
+   ```bash
+   plasmarestart
+   ```
 * **Run 'uninstall-system-diagnostics' to Uninstall this Package**
    ```bash
    uninstall-system-diagnostics

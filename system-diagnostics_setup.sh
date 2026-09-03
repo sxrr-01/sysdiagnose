@@ -93,15 +93,25 @@ echo "alias uninstall-system-diagnostics='~/system-diagnostics/unins_sysdiag.sh'
 echo "alias plasmarestart='~/system-diagnostics/plasmarestart.sh'" >> ~/.bashrc
 source ~/.bashrc
 
-echo -e "
-Diagnostics Package Installed Successfully \n
-Added Commands & Functionality:
-    Run 'system-diagnostics' to Run a quick Boot Time & Storage Overview. Output will be written to: ~/system-diagnostics/an-out.txt
-    Run 'whatpower' to get current Input Voltage, Current and Wattage
-    Run 'bashedit' for quick ~/.bashrc access
-    Run 'plasmarestart' to restart Plasmashell in Case of Hangups / Crashes \n
-To Uninstall this Package, Run 'uninstall-system-diagnostics' \n
-Please Reload your Shell or run 'source ~/.bashrc' for all Changes to take Effect
-"
+TARGET_DIR="$HOME/system-diagnostics"
+
+if [ -d "$TARGET_DIR" ]; then
+    echo -e "
+    Diagnostics Package Installed Successfully \n
+    Added Commands & Functionality:
+        Run 'system-diagnostics' to Run a quick Boot Time & Storage Overview. Output will be written to: ~/system-diagnostics/an-out.txt
+        Run 'whatpower' to get current Input Voltage, Current and Wattage
+        Run 'bashedit' for quick ~/.bashrc access
+        Run 'plasmarestart' to restart Plasmashell in Case of Hangups / Crashes (Will close Running Programs!) \n
+    To Uninstall this Package, Run 'uninstall-system-diagnostics' \n
+    Please Reload your Shell or run 'source ~/.bashrc' for all Changes to take Effect
+    "
+    else
+        echo "The Package was not Installed Successfully"
+        rm -rf ~/system-diagnostics
+        sed -i '/system-diagnostics/d' ~/.bashrc
+        sed -i '/bashedit/d' ~/.bashrc
+fi
+
 
 
