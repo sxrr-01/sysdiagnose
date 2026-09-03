@@ -34,6 +34,7 @@ mkdir ~/system-diagnostics
 touch ~/system-diagnostics/system-diagnostics.sh
 touch ~/system-diagnostics/power.sh
 touch ~/system-diagnostics/unins_sysdiag.sh
+touch ~/system-diagnostics/plasmarestart.sh
 
 cat << 'EOF' >> ~/system-diagnostics/system-diagnostics.sh
 echo "[Storage]" > ~/system-diagnostics/an-out.txt
@@ -76,14 +77,20 @@ sed -i '/bashedit/d' ~/.bashrc
 source ~/.bashrc
 EOF
 
+cat << 'EOF' >> ~/system-diagnostics/plasmarestart.sh
+nohup plasmashell --replace &
+
+EOF
 chmod +x ~/system-diagnostics/system-diagnostics.sh
 chmod +x ~/system-diagnostics/power.sh
 chmod +x ~/system-diagnostics/unins_sysdiag.sh
+chmod +x ~/system-diagnostics/plasmarestart.sh
 
 echo "alias system-diagnostics='~/system-diagnostics/system-diagnostics.sh'" >> ~/.bashrc
 echo "alias whatpower='~/system-diagnostics/power.sh'" >> ~/.bashrc
 echo "alias bashedit='nano ~/.bashrc'" >> ~/.bashrc
 echo "alias uninstall-system-diagnostics='~/system-diagnostics/unins_sysdiag.sh'" >> ~/.bashrc
+echo "alias plasmarestart='~/system-diagnostics/plasmarestart.sh'" >> ~/.bashrc
 source ~/.bashrc
 
 echo -e "
@@ -91,7 +98,8 @@ Diagnostics Package Installed Successfully \n
 Added Commands & Functionality:
     Run 'system-diagnostics' to Run a quick Boot Time & Storage Overview. Output will be written to: ~/system-diagnostics/an-out.txt
     Run 'whatpower' to get current Input Voltage, Current and Wattage
-    Run 'bashedit' for quick ~/.bashrc access \n
+    Run 'bashedit' for quick ~/.bashrc access
+    Run 'plasmarestart' to restart Plasmashell in Case of Hangups / Crashes \n
 To Uninstall this Package, Run 'uninstall-system-diagnostics' \n
 Please Reload your Shell or run 'source ~/.bashrc' for all Changes to take Effect
 "
