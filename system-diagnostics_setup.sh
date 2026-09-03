@@ -102,7 +102,7 @@ if [ -d "$TARGET_DIR" ]; then
         Run 'system-diagnostics' to Run a quick Boot Time & Storage Overview. Output will be written to: ~/system-diagnostics/an-out.txt
         Run 'whatpower' to get current Input Voltage, Current and Wattage
         Run 'bashedit' for quick ~/.bashrc access
-        Run 'plasmarestart' to restart Plasmashell in Case of Hangups / Crashes (Will close Running Programs!) \n
+        Run 'plasmarestart' to restart Plasmashell in Case of Hangups / Crashes (May close Running Programs!) \n
     To Uninstall this Package, Run 'uninstall-system-diagnostics' \n
     Please Reload your Shell or run 'source ~/.bashrc' for all Changes to take Effect
     "

@@ -31,7 +31,7 @@
    ```bash
    bashedit
    ```
-* **Run 'plasmarestart' to restart Plasmashell in Case of Hangups / Crashes (Will close Running Programs!)**
+* **Run 'plasmarestart' to restart Plasmashell in Case of Hangups / Crashes (May close Running Programs!)**
    ```bash
    plasmarestart
    ```
