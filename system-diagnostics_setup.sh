@@ -78,9 +78,9 @@ source ~/.bashrc
 EOF
 
 cat << 'EOF' >> ~/system-diagnostics/plasmarestart.sh
-nohup plasmashell --replace &
-
+plasmashell --replace > /dev/null & disown
 EOF
+
 chmod +x ~/system-diagnostics/system-diagnostics.sh
 chmod +x ~/system-diagnostics/power.sh
 chmod +x ~/system-diagnostics/unins_sysdiag.sh
